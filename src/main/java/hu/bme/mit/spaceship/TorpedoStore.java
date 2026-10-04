@@ -27,7 +27,7 @@ public class TorpedoStore {
       }
     }
   }
-  
+  //cat gif as requested: https://tinyurl.com/4emj4dxj
   private Random generator = new Random();
   public boolean fire(int numberOfTorpedos){
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
@@ -41,7 +41,7 @@ public class TorpedoStore {
 
     if (r >= FAILURE_RATE) {
       // successful firing
-      this.torpedoCount -= numberOfTorpedos;
+      this.torpedoCount = this.torpedoCount - numberOfTorpedos;
       success = true;
     } else {
       // simulated failure
